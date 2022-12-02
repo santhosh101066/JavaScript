@@ -9,8 +9,8 @@ const div = 1 / 2
 const modulo = 1 % 2
 const exponent = 1 ** 2
 console.log(add, sub, div, modulo,);
-
-var company = 'Aspire System'
+//-------------String-----------------------
+var company = 'Aspire System '
 console.log(company.length);
 console.log(company.split(' '));
 console.log(company.trim())
@@ -25,4 +25,14 @@ ${company.concat(" Siruseri")}
 console.log(company.slice(6));
 console.log(company.match("System"));
 
-console.log(company.slice(0, 6) + " dummy " + company.slice(6));
+console.log(company.slice(0, 6) + " Aspire " + company.slice(6));
+console.log(company.charAt(5));
+console.log(company.charCodeAt(5));
+console.log(company.codePointAt(4));
+console.log(company.concat(" Siruseri"));
+console.log(company.endsWith('System'));
+console.log(company.includes('System'));
+console.log(company.substring(0,10));
+console.log(company.slice(6)===company.substring(6));
+console.log(company.toUpperCase());
+console.log(company.trim().length);

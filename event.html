@@ -9,15 +9,69 @@
 </head>
 
 <body>
+    <style>
+        .first div {
+            width: 100px;
+            height: 100px;
+            background-color: aquamarine;
+            margin: 20px;
+        }
+
+        .first {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+            border: black 1px solid;
+        }
+    </style>
     <button>Change color</button>
+    <div id="come">
+
+    </div>
+    <div id="clicker" class="first" onclick="clickme()">
+        <div>1</div>
+    </div>
+    <h2 id="key"></h2><br>
+    <span id="up">Key Up</span><br><span id="down">Key down</span>
+    
     <script>
+        var count = 1
+        const key=document.getElementById('key')
+        const up = document.getElementById('up')
+        const down=document.getElementById('down')
         function random(max) {
             return Math.random() * max + 1
         }
-        document.querySelector('button').addEventListener('click', () => {
+       const id= document.querySelector('button')
+       id.addEventListener('click', () => {
             document.querySelector('body').style.backgroundColor = `rgb(${random(255)},${random(255)},${random(255)})`
         })
+
+        function clickme() {
+            const btn = document.createElement('div')
+            count++
+            btn.addEventListener('click', (ev) => {ev.stopPropagation();})
+            btn.textContent = count
+            document.getElementById("clicker").appendChild(btn)
+        }
+
+        document.addEventListener('keypress',(eve)=>{
+            key.textContent=`You have Pressed ${eve.key}`
+        })
+        document.addEventListener('keydown',()=>{
+            down.style.color='green'
+            up.style.color='black'
+        })
+        document.addEventListener('keyup',()=>{
+            up.style.color='green'
+            down.style.color='black'
+        })
+        
+
     </script>
+    
+
+
 </body>
 
 </html>
