@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .div{
+            display: flex;
+            gap:10px
+        }
+        .div div{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+        }
+
+    </style>
+    <div class="div">
+        <div data-a="1"></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <input type="text" name="san">
+    <input type="text" name="van">
+    <script>
+        const aspire=document.querySelector('.div')
+        aspire.addEventListener('click',(ev)=>{
+            aspire.style.backgroundColor='red'
+        })
+    </script>
+</body>
+</html>
