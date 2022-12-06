@@ -57,3 +57,16 @@ function defaultParam(a = 'Computer') {
 }
 defaultParam('Aspire')
 defaultParam()
+
+function one(){
+    console.log('24');
+    function h2(){
+        console.log("ghjkl");
+        return ()=>{
+            console.log('This in third');
+        }
+    }
+    return h2
+}
+
+one()()()

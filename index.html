@@ -69,6 +69,19 @@
             count = 0
         })
     </script>
+
+    <br><br><br><br><br>
+    <hr>
+    <button onclick="console.clear()">Clear console</button>
+    <button id="array">Array</button>
+    <script>
+     const array=   document.getElementById('array')
+       array.addEventListener('click',()=>{
+        const script=document.createElement('script')
+        script.src='/arrays.js'
+        document.body.append(script)
+        })
+    </script>
 </body>
 
 </html>

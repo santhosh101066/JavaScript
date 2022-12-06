@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Looping</title>
+</head>
+
+<body>
+    <style>
+        .box {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, 120px);
+            border: 4px solid rgb(255, 130, 130);
+            padding: 20px;
+            justify-content: space-around;
+        }
+
+        .box div {
+            width: 100px;
+            height: 100px;
+            background-color: blueviolet;
+            margin: 10px;
+        }
+    </style>
+    <input type="number">
+    <button onclick="create()">Click to add</button>
+    <div class="box">
+    </div>
+    <script>
+        function create() {
+            const div = document.querySelector('div')
+            const count = Number(document.querySelector('input').value)
+            let i = 0
+            while (i < count) {
+                const newElement = document.createElement('div')
+                newElement.textContent = `Element no: ${i}`
+                newElement.addEventListener('click', (ev) => { div.removeChild(ev.target) })
+                div.appendChild(newElement)
+                i++
+            }
+        }
+    </script>
+</body>
+
+</html>
