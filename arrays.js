@@ -43,10 +43,10 @@ console.log(list);
 // console.log(list.indexOf('Hiii'));
 // console.log(Array.isArray(list));
 // console.log(list.join(' '));
-// const iterator = list.keys() // same as for value
-// for (const key of iterator) {
-//     console.log(key);
-// }
+const iterator = list.keys() // same as for value
+for (const key of iterator) {
+    console.log(key);
+}
 // console.log(list.lastIndexOf('Hiii'), 'last Index');
 // console.log(Array.of(1, 2, 3, 4, 5, 6));
 // console.log(list.reverse());

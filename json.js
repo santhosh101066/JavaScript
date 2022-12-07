@@ -2,6 +2,7 @@ const obj={
 name:'Santhosh',
 id:100,
 age:22,
+0:'as',
 location:'chennai',
 learnings:['java', 'python', 'html','css','js'],
 demo:()=>{
