@@ -15,7 +15,7 @@ function without(a){
     }
     runningstatus.textContent='finished'
 }
-async function withasync(a){
+async function withasync(){
     runningstatus.textContent='running'
     const data= await fetch('http://localhost:3000/')
     console.log(data);
@@ -27,6 +27,6 @@ noasyncbtn.addEventListener('click',()=>{
     without(Number(document.querySelector('input').value))
 })
 asyncbtn.addEventListener('click',()=>{
-    withasync(Number(document.querySelector('input').value))
+    withasync()
     console.log('event end');
 })

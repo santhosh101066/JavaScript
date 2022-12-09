@@ -42,6 +42,27 @@
                 i++
             }
         }
+        car = ['honda', 'maruthi']
+        const a =
+            car.forEach((element, i, arr) => {
+
+                if (i == 1) {
+                    arr[i] = 'suziki'
+                    return element
+                }
+                console.log(element, i, arr);
+
+            });
+
+        console.log(car);
+        console.log(a);
+
+        for (const key of car) {
+            console.log(key);
+        }
+        for (const key in car) {
+            console.log(key);
+        }
     </script>
 </body>
 

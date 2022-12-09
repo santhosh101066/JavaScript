@@ -17,6 +17,7 @@ person.introduceYourself()
 person.demo()
 
 class Student extends Person{
+     #price
     constructor(name,age,clg){
         super(name,age)
         this.clg=clg
@@ -28,8 +29,13 @@ class Student extends Person{
     #privateMethod(){
         console.log('Private methord');
     }
+    price(price){
+      return this.#price= price
+    }
+
     
 }
 const student=new Student('sanjai',22,'MNMJEC')
-console.log(student);
+console.log(student.price('1234'));
+
 student.selfIntro()
